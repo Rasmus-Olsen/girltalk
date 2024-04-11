@@ -1,0 +1,67 @@
+.memory-game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative; /* Ensure the .memory-game container is positioned relative */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+  height: 100px;
+  background-color: #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-size: cover;
+  position: relative; /* Added to position the front and back layers */
+}
+
+.front,
+.back {
+  position: absolute; /* Added to position the front and back layers */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.back {
+  display: none; /* Initially hide the back (image) */
+}
+
+.flipped .back {
+  display: block; /* Show the back (image) when card is flipped */
+}
+
+.matched .back {
+  display: block; /* Keep the back (image) visible for matched cards */
+}
+
+.message {
+  position: absolute; /* Position the message absolutely within the .memory-game container */
+  top: 50%; /* Place the message at the vertical center */
+  left: 50%; /* Place the message at the horizontal center */
+  transform: translate(-50%, -50%); /* Center the message both horizontally and vertically */
+  font-size: 24px; /* Adjust font size as needed */
+  display: none;
+}
+
+.her {
+  color: red; /* Example styling */
+  font-weight: bold; /* Example styling */
+  display: block;
+}
+
+.hidden {
+  transition: all 2s ease-in-out;
+  opacity: 0;
+}
