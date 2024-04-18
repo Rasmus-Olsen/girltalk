@@ -1,7 +1,13 @@
+html {
+  /* cursor: url("https://i.stack.imgur.com/wu8CP.png"), auto; */
+  cursor: url("cursor.png"), auto;
+}
+
 body {
   background: #f8c7da;
 }
 
+/* Spil */
 .memory-game {
   display: flex;
   justify-content: center;
@@ -21,7 +27,7 @@ body {
   height: 100px;
   background-color: #f8c7da;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: url("cursor.png"), auto;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative; /* Added to position the front and back layers */
@@ -86,7 +92,7 @@ button {
   border-radius: 8px;
   color: white;
   transition: all 0.4s ease-in-out;
-  cursor: pointer;
+  cursor: url("cursor.png"), auto;
 }
 button:hover {
   border-color: #273aaa;
