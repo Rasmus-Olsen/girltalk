@@ -7,32 +7,55 @@
         <img class="image" src="hjerte.png" alt="">
         <img class="image" src="sms.png" alt="">
     </div>
-    <a href="" class="chat-btn">Chat med os</a>
+    <a target="_blank" href="https://www.girltalk.dk/vores-tilbud/chat-med-os?fbclid=IwZXh0bgNhZW0CMTAAAR2wDOBLj4vQdhqUSWK9HXOjyowyEgRbAoCb-mycf3iDetajGmutqpEyPyM_aem_AdN9SfU-PgsdQfFHiN9HPvthJ9mBYJB5em2GiZu6xyC1yYnMKt-NbtvIlaSOhl9_U0JKZRomX8FM-sw7kxFm1hXJ" class="chat-btn">Chat med os</a>
+
 </div>
 
 
+
+
+
 <style>
+
+    @keyframes opacity {
+    50% {opacity: 0.2;}
+    }
+
     .button-image {
-        margin: 10px auto;
+        /* margin: 10px auto; */
+        text-align: center;
     }
     .image-pulse {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        width: 150px;
+        width: fit-content;
+        gap: 10px;
         margin: 10px auto;
     }
     .image {
         height: auto;
-        width: 50px;
+        width: 80px;
+        animation: opacity 3s infinite;
     }
 
     .chat-btn {
         border: 3px solid #fc4d5c;
         transition: all 0.2s ease-in-out;
         text-decoration: none;
-        font-size: 50px;
+        font-size: 36px;
         font-weight: bold;
-        padding: 20px;
-        color: #273AAA
+        padding: 10px 30px;
+        color: #273AAA;
+        border-radius: 16px;
+        display: inline-block;
+        text-transform: uppercase;
+        background: #f8c7da;
     }
+
+    .chat-btn:hover {
+        filter: drop-shadow(0px 0px 5px #fc4d5c);
+
+    }
+
 </style>
+
