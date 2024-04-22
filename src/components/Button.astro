@@ -12,6 +12,10 @@
         <img class="closed-image" src="closed.svg" alt="">
         <p class="bold">Lukket</p>
     </div>
+    <div class="open">
+        <img class="open-image" src="open.svg" alt="">
+        <p class="bold">Åbnet</p>
+    </div>
 </div>
 
 
@@ -19,6 +23,13 @@
 
 
 <style>
+
+    .open {
+        margin: 10px auto;
+        display: flex;
+        gap: 10px;
+        width: 317px;
+    }
 
     .closed {
         margin: 10px auto;
@@ -32,7 +43,7 @@
         margin: auto 0;
     }
 
-    .closed-image {
+    .closed-image, .open-image {
         height: 40px;
         width: 40px;
         
@@ -80,3 +91,30 @@
 
 </style>
 
+<script>
+     // Get the elements to toggle
+     const openDiv = document.querySelector('.open');
+    const closedDiv = document.querySelector('.closed');
+
+    // Function to check the current time and toggle the visibility
+    function toggleDivs() {
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+
+        // Check if current time is between 13:00 and 17:00
+        if ((hours > 18 || (hours === 18 && minutes >= 30)) && (hours < 24)) {
+            openDiv.style.display = 'flex';
+            closedDiv.style.display = 'none';
+        } else {
+            openDiv.style.display = 'none';
+            closedDiv.style.display = 'flex';
+        }
+    }
+
+    // Call the function initially to set the correct visibility
+    toggleDivs();
+
+    // Update the visibility every minute
+    setInterval(toggleDivs, 60000);
+</script>
