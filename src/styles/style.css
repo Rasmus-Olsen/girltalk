@@ -9,8 +9,18 @@ body {
   margin: 10px auto;
 }
 
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 a {
   cursor: url("cursor.png"), auto;
+}
+
+p {
+  font-size: 24px;
 }
 
 .image-text {
@@ -20,9 +30,6 @@ a {
   align-items: center;
 }
 
-.hero-image {
-}
-
 .hero-heading {
   display: inline;
   font-size: 96px;
@@ -30,8 +37,13 @@ a {
 }
 
 .hero-p {
-  font-size: 24px;
-  display: inline;
+  display: block;
+  margin-top: 0;
+}
+
+.content {
+  width: 900px;
+  margin: 10px auto;
 }
 
 /* Spil */
