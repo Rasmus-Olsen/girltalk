@@ -4,8 +4,46 @@ html {
   background: #f8c7da;
 }
 
+body {
+  max-width: 1100px;
+  margin: 10px auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 a {
   cursor: url("cursor.png"), auto;
+}
+
+p {
+  font-size: 24px;
+}
+
+.image-text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.hero-heading {
+  display: inline;
+  font-size: 96px;
+  color: #273aaa;
+}
+
+.hero-p {
+  display: block;
+  margin-top: 0;
+}
+
+.content {
+  width: 900px;
+  margin: 10px auto;
 }
 
 /* Spil */
